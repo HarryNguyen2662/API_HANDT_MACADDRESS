@@ -10,7 +10,7 @@ mongoose.connect(config.mongoose.url, config.mongoose.options).then(() => {
 });
 */
 
-server = app.listen(config.port, () => {
+server = app.listen(config.port || 3000, () => {
   logger.info(`Listening to port ${config.port}`);
 });
 
